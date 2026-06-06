@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "w='$WATER'.translate(str.maketrans('water','01234')); s='$STIR'.translate(str.maketrans('stir.','01234')); print(oct(int(w,5)+int(s,5))[2:])" | tr '01234567' 'bestchol'
