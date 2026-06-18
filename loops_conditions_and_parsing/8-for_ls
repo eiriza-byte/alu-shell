@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Lists current directory files, showing only the part after the first dash
-for file in *; do
+# This script displays the content of the current directory in list format, showing only the part after the first dash
+shopt -s nullglob
+for file in $(ls); do
     if [[ "$file" == *-* ]]; then
         echo "${file#*-}"
     fi
