@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Lists current directory files, showing only the part after the first dash
+for file in ./*; do
+    name=$(basename "$file")
+    if [[ "$name" != .* ]] && [[ "$name" == *-* ]]; then
+        echo "${name#*-}"
+    fi
+done
